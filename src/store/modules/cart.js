@@ -9,7 +9,7 @@ export default {
     totalValue(state) {
       return state.items.length;
     },
-    isInCart(state) { return item => state.items.find(i => i === item) },
+    isItemInCart(state) { return item => state.items.find(i => i === item); },
   },
   mutations: {
     addItem(state, item) {
@@ -20,8 +20,8 @@ export default {
     },
   },
   actions: {
-    updateCart({commit, state, getters}, item) {
-      getters.isInCart(item) ? commit('removeItem', item) : commit('addItem', item);
+    updateCart({ commit, getters }, item) {
+      getters.isItemInCart(item) ? commit('removeItem', item) : commit('addItem', item);
     },
-  }
+  },
 };

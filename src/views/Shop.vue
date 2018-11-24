@@ -4,7 +4,7 @@
     <button
       v-for="item in items" @click="updateCart(item)"
       class="tile"
-      :style="{ 'background-color': $store.getters.isInCart(item) ? '#e6e6e6' : 'white'}">
+      :style="{ 'background-color': $store.getters.isItemInCart(item) ? '#e6e6e6' : 'white'}">
       <p>{{ item.name }}</p>
       <p>{{ item.value }}</p>
       <i class="fas fa-shopping-cart"></i>
@@ -21,44 +21,44 @@ export default {
     return {
       items: [
         {
-          name: "Toaster",
-          value: "20",
+          name: 'Toaster',
+          value: '20',
         },
         {
-          name: "Iron",
-          value: "30",
+          name: 'Iron',
+          value: '30',
         },
         {
-          name: "Water",
-          value: "30",
+          name: 'Water',
+          value: '30',
         },
         {
-          name: "Toaster",
-          value: "20",
+          name: 'Toaster',
+          value: '20',
         },
         {
-          name: "Iron",
-          value: "30",
+          name: 'Iron',
+          value: '30',
         },
         {
-          name: "Water",
-          value: "30",
+          name: 'Water',
+          value: '30',
         },
         {
-          name: "Toaster",
-          value: "20",
+          name: 'Toaster',
+          value: '20',
         },
         {
-          name: "Iron",
-          value: "30",
+          name: 'Iron',
+          value: '30',
         },
         {
-          name: "Water",
-          value: "30",
+          name: 'Water',
+          value: '30',
         },
         {
-          name: "Water",
-          value: "30",
+          name: 'Water',
+          value: '30',
         },
       ],
     };
@@ -71,7 +71,7 @@ export default {
     updateCart(item) {
       this.$store.dispatch('updateCart', item);
     },
-  }
+  },
 };
 </script>
 
