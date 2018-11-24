@@ -1,6 +1,6 @@
 <template>
-  <div class="shop">
-    <h1>Shop</h1>
+  <div class="container shop">
+    <h1 class="mb-5">Shop</h1>
     <button v-for="item in items" @click="" class="tile">
       <p>{{ item.name }}</p>
       <p>{{ item.value }}</p>
@@ -45,6 +45,10 @@ export default {
         },
         {
           name: "Iron",
+          value: "30",
+        },
+        {
+          name: "Water",
           value: "30",
         },
         {

@@ -34,6 +34,7 @@ ul {
 }
 li {
   display: inline;
+  margin-left: 20px;
 }
 h1, h2 {
   font-weight: normal;
