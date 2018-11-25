@@ -28,6 +28,9 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+button:focus {
+  outline: 0;
+}
 ul {
   list-style-type: none;
   padding: 0;
@@ -40,7 +43,11 @@ h1, h2 {
   font-weight: normal;
 }
 a {
-  color: #42b983;
+  color: #e6001f;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
 }
 p {
   font-size: 14px;

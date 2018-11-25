@@ -7,16 +7,17 @@ export default {
       return state.items.length;
     },
     totalValue(state) {
-      return state.items.length;
+      if (!state.items.length) return 0;
+      return state.items.reduce((sum, item) => sum + item.value, 0);
     },
-    isItemInCart(state) { return item => state.items.find(i => i === item); },
+    isItemInCart(state) { return item => state.items.some(i => i.id === item.id); },
   },
   mutations: {
     addItem(state, item) {
       state.items.push(item);
     },
     removeItem(state, item) {
-      state.items.splice(state.items.indexOf(item), 1);
+      state.items.splice(state.items.findIndex(i => i.id === item.id), 1);
     },
   },
   actions: {

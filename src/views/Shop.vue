@@ -2,13 +2,17 @@
   <div class="container shop">
     <h1 class="mb-5">Shop</h1>
     <button
-      v-for="item in items" @click="updateCart(item)"
+      v-for="(item, index) in items" @click="updateCart(item)"
+      :key="index"
       class="tile"
       :style="{ 'background-color': $store.getters.isItemInCart(item) ? '#e6e6e6' : 'white'}">
       <p>{{ item.name }}</p>
       <p>{{ item.value }}</p>
       <i class="fas fa-shopping-cart"></i>
     </button>
+    <div class="text-center mt-4">
+      <router-link :to="{ name: 'qrCode' }" class="mt-3" style="border: solid 1px;padding: 10px 20px">Checkout</router-link>
+    </div>
   </div>
 </template>
 
@@ -21,44 +25,54 @@ export default {
     return {
       items: [
         {
+          id: 1,
           name: 'Toaster',
-          value: '20',
+          value: 20,
         },
         {
+          id: 2,
           name: 'Iron',
-          value: '30',
+          value: 30,
         },
         {
+          id: 3,
           name: 'Water',
-          value: '30',
+          value: 30,
         },
         {
+          id: 4,
           name: 'Toaster',
-          value: '20',
+          value: 20,
         },
         {
+          id: 5,
           name: 'Iron',
-          value: '30',
+          value: 30,
         },
         {
+          id: 6,
           name: 'Water',
-          value: '30',
+          value: 30,
         },
         {
+          id: 7,
           name: 'Toaster',
-          value: '20',
+          value: 20,
         },
         {
+          id: 8,
           name: 'Iron',
-          value: '30',
+          value: 30,
         },
         {
+          id: 9,
           name: 'Water',
-          value: '30',
+          value: 30,
         },
         {
+          id: 10,
           name: 'Water',
-          value: '30',
+          value: 30,
         },
       ],
     };
@@ -81,7 +95,7 @@ export default {
   width: 180px;
   height: 100%;
   border: 1px;
-  border-color: #42b983;
+  border-color: #e6001f;
   border-style: solid;
   display: inline-block;
   margin: 10px;
@@ -91,6 +105,6 @@ export default {
   background-color: #e6e6e6;
 }
 .tile i {
-  color: #42b983;
+  color: #e6001f;
 }
 </style>
