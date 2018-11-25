@@ -22,6 +22,7 @@ export default {
   },
   actions: {
     updateCart({ commit, getters }, item) {
+      // eslint-disable-next-line
       getters.isItemInCart(item) ? commit('removeItem', item) : commit('addItem', item);
     },
   },

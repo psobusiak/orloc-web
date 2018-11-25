@@ -34,7 +34,7 @@ export default {
       const value = [];
       this.$store.state.cart.items.forEach(item => value.push(item.id));
       return value;
-    }
+    },
   },
 };
 </script>

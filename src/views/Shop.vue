@@ -11,7 +11,12 @@
       <i class="fas fa-shopping-cart"></i>
     </button>
     <div class="text-center mt-4">
-      <router-link :to="{ name: 'qrCode' }" class="mt-3" style="border: solid 1px;padding: 10px 20px">Checkout</router-link>
+      <router-link
+        :to="{ name: 'qrCode' }"
+        class="mt-3"
+        style="border: solid 1px;padding: 10px 20px">
+        Checkout
+      </router-link>
     </div>
   </div>
 </template>
